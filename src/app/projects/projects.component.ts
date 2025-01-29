@@ -30,9 +30,9 @@ export class ProjectsComponent implements AfterViewInit {
       name: 'Portfolio Website',
       description: 'A personal portfolio showcasing professional experience and projects.',
       year: '2025',
-      techStack: 'Angular, Spring Boot, Bootstrap',
+      techStack: 'Angular, Bootstrap',
       contribution: 'Built a Single Page Application based on Angular 17 that displays my professional portfolio.',
-      github: ''
+      github: 'https://github.com/PhaneendraPrasadPalanki/Portfolio'
     },
     {
       name: 'QuickHealz',
