@@ -1,0 +1,29 @@
+<div class="projects-container">
+    <h2>Projects</h2>
+    <div class="carousel">
+      <div class="carousel-inner" [style.transform]="'translateX(-' + (currentIndex * 100) + '%)'">
+        <div *ngFor="let project of projectsList" class="carousel-item">
+          <div class="project-content">
+            <!-- Left Column: Project Name and Year -->
+            <div class="project-left">
+              <h3>{{ project.name }}</h3>
+              <p class="year"><strong>Year:</strong> {{ project.year }}</p>
+              <a href="{{ project.githubUrl }}" style="color: aliceblue; font-size: medium;">Github</a>
+            </div>
+            
+            <!-- Right Column: Project Details -->
+            <div class="project-right">
+              <p class="description"><strong>Description:</strong> {{ project.description }}</p>
+              <p class="tech-stack"><strong>Tech Stack:</strong> {{ project.techStack }}</p>
+              <p class="contribution"><strong>My Contribution:</strong> {{ project.contribution }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Navigation Buttons -->
+      <button class="prev-btn" (click)="prevSlide()">&#10094;</button>
+      <button class="next-btn" (click)="nextSlide()">&#10095;</button>
+    </div>
+  </div>
+  

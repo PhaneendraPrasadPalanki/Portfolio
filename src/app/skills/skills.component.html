@@ -1,0 +1,44 @@
+<div class="skills-section">
+  <h2>Core Competencies & Technical Skills</h2>
+  <div class="skills-grid" @fadeInStagger>
+    <!-- Technical Skills -->
+    <div *ngFor="let group of technicalSkills" class="skill-card">
+      <div class="skill-header">
+        <img
+          [src]="group.icon"
+          alt="{{ group.name }}"
+          class="skill-icon"
+        />
+        <h3>{{ group.name }}</h3>
+      </div>
+      <div class="skill-buttons">
+        <button
+          *ngFor="let skill of group.skills"
+          class="skill-btn"
+        >
+          {{ skill }}
+        </button>
+      </div>
+    </div>
+
+    <!-- Soft Skills -->
+    <div class="skill-card">
+      <div class="skill-header">
+        <img
+          src="assets/icons/softskills.png"
+          alt="Soft Skills"
+          class="skill-icon"
+        />
+        <h3>Soft Skills</h3>
+      </div>
+      <div class="skill-buttons">
+        <button
+          *ngFor="let skill of softSkills[0].skills"
+          class="skill-btn"
+        >
+          {{ skill }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

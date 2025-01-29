@@ -1,0 +1,27 @@
+<div class="education-container">
+    <h2>Education</h2>
+    <div class="education-item" *ngFor="let education of educationList">
+      <!-- Logo Section -->
+      <div class="education-logo">
+        <img [src]="education.logo" [alt]="education.university + ' logo'" />
+      </div>
+  
+      <!-- Details Section -->
+      <div class="education-details">
+        <h3>{{ education.university }}</h3>
+        <p class="degree"><strong>Degree:</strong> {{ education.degree }}</p>
+        <p class="major"><strong>Major:</strong> {{ education.major }}</p>
+        <p class="gpa"><strong>GPA:</strong> {{ education.gpa }}</p>
+        <p class="years"><strong>Years:</strong> {{ education.years }}</p>
+      </div>
+  
+      <!-- Relevant Courses Section -->
+      <div class="education-courses">
+        <h4>Relevant Courses</h4>
+        <ul>
+          <li *ngFor="let course of education.courses">{{ course }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  

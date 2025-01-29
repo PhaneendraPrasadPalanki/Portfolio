@@ -1,0 +1,104 @@
+.profile-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 2rem 10rem 2rem;
+    gap: 15rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: black;
+  
+    .profile-image {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+  
+      img {
+        width: 300px; /* Fixed circular dimensions */
+        height: 300px; /* Ensures circular shape */
+        border-radius: 50%; /* Circular shape */
+        object-fit: cover; /* Ensures the image fits and fills the circle */
+        object-position: center; /* Centers the image */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        transform: scale(1.1); /* Slight zoom for a better fit */
+      }
+    }
+  
+    .profile-intro {
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+    
+        .intro-title {
+          font-size: 2rem;
+          margin-bottom: 1rem;
+          color: white;
+          opacity: 0; /* Initially hidden */
+        transform: translateY(20px); /* Slightly moved down */
+        animation: fadeIn 1s ease-out forwards;
+        animation-delay: 0.2s; 
+        .name{
+            color: #3f51b5;
+            font-weight: bold;
+            font-size: 2.5rem;
+        }
+          }
+    
+        .intro-text {
+          font-size: 2rem;
+          line-height: 1.5;
+          margin-bottom: 1.5rem;
+          color: white;
+          opacity: 0; /* Initially hidden */
+        transform: translateY(20px); /* Slightly moved down */
+        animation: fadeIn 1s ease-out forwards;
+        animation-delay: 0.8s;
+          .lang1{
+                color: orange;
+                font-size: 2.5rem;
+            font-weight: bold;
+          }
+          .lang2{
+            color: greenyellow;
+            font-size: 2.5rem;
+        font-weight: bold;
+      }
+      .lang3{
+        color: #a6120d;
+        font-size: 2.5rem;
+    font-weight: bold;
+  }
+        }
+    
+        .download-btn {
+          padding: 0.8rem 1.5rem;
+          font-size: 1rem;
+          color: #fff;
+          background-color: #1976d2;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+          opacity: 0; /* Initially hidden */
+        transform: translateY(20px); /* Slightly moved down */
+        animation: fadeIn 1s ease-out forwards;
+            animation-delay: 1.4s;
+          &:hover {
+            background-color: #3f51b5;
+          }
+        }
+      }
+    
+    @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px); /* Start slightly below */
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0); /* Move to original position */
+        }
+      }
+    }
+    
+  

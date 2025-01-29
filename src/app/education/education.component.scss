@@ -1,0 +1,88 @@
+.education-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1.5rem;
+    padding-bottom: 5rem;
+    background-color: black;    
+  
+    h2 {
+      margin-top: 3rem;
+      color: white;
+      text-align: center;
+      font-size: 2.5rem;
+    }
+  }
+  
+  .education-item {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr; /* Three equal sections: Logo, Details, Relevant Courses */
+    align-items: center;
+    padding: 1rem;
+    border: 3px solid #222 ;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px #222;
+    // transition: transform 0.2s, box-shadow 0.2s;
+    // background-color: #ffffff;
+  
+    // &:hover {
+    //   transform: translateY(-5px);
+    //   box-shadow: 0px 4px 10px #303f9f;
+    // }
+    
+    .education-logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+      img {
+        width: 150px;
+        height: auto;
+        border-radius: 0.5rem;
+        object-fit: contain;
+      }
+    }
+  
+    .education-details {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 0.5rem;
+  
+      h3 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #303f9f;
+      }
+  
+      .degree,
+      .major,
+      .gpa,
+      .years {
+        font-size: 1rem;
+        font-weight: 500;
+        color: #6b7280;
+      }
+    }
+  
+    .education-courses {
+      h4 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #303f9f;
+        margin-bottom: 0.5rem;
+      }
+  
+      ul {
+        list-style-type: disc;
+        padding-left: 1.5rem;
+  
+        li {
+          font-size: 0.95rem;
+          font-weight: 400;
+          color: #6b7280;
+        }
+      }
+    }
+  }
+  
